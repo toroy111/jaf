@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD_多頁式網站(SCSS練習)</title>
+    <link rel="icon" href="images/Bitmap.png" />
+    <meta name="description" content="RWD_製作多頁式網站(SCSS練習)">
+    <!-- FB標籤 -->
+    <meta property="og:title" content="RWD_多頁式網站(SCSS練習)" />
+    <meta property="og:description" content="RWD_製作多頁式網站(SCSS練習)" />
+    <meta property="og:url" content="https://www.google.com.tw" />
+    <meta property="og:type" content="website" /> <!-- FB內容的媒體類型 -->
+    <meta property="og:image" content="images/334674_memori_logo_network_social_star_icon.png" />
+    <link rel="apple-touch-icon" href="images/334674_memori_logo_network_social_star_icon.png" />
+    <meta property="og:image:type" content="png" />
+    <meta property="og:image:width" content="224" />
+    <meta property="og:image:height" content="50" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- 載入fontAwesome動畫 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background-color: #2e3c50;
+	}
+	nav{
+		margin-top: 333px;
+		width: 100%;
+		height: 100px;
+		background-color: rgb(0,0,0);
+	
+	}
+	.in{
+		width: 40%;
+		height: 100px;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.in a{
+		margin: 0 10px;
+		text-decoration: none;
+		font-size: 24px;
+		font-weight: bold;
+		color: white;
+		opacity: 0;
+		animation: topmove 1s ease forwards;
+		animation-delay: calc(.4s*var(--i));
+	}
+	@keyframes topmove{
+		0%{
+			transform: translateY(-100px);
+		}
+		100%{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+ 	footer{
+		text-align: center;
+		line-height: 800px; 
+		}
+		
+		</style>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1> <a href="index.html">珍愛家蔬食早午餐 </a></h1>
+            <ul class="main-menu">
+                <a href="index.html" style="--i:1">首頁</a>
+			<a href="cart.html" style="--i:2">線上訂餐</a>
+			<a href="#" style="--i:3">麵包專區</a>
+			<a href="#" style="--i:4">Gallery</a>
+			<a href="login.html" style="--i:5">登入</a>
+            </ul>
+            <!-- 漢堡選單icon -->
+            <i class="fa-solid fa-bars showmenu"></i>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <div class="banner">
+        <div class="bannerContent">
+            <h2><span>咬一口</span>就無法忘懷的漢堡</h2>
+            <p>實實在在無法錯過的好滋味</p>
+            <p> <i class="fa-solid fa-utensils"></i>
+                厚加大漢堡 <i class="fa-solid fa-utensils"></i> </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h3>
+                客人總是在詢問
+                <span>這麼好吃的秘訣是什麼</span>
+            </h3>
+
+            <ul class="tips">
+                <li> <img src="images/feature_1.png" alt="tips01">
+                    <h4>台灣本土蔬菜</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, nulla tenetur rem sed,
+                        voluptatum assumenda doloremque.
+                    </p>
+                </li>
+
+                <li> <img src="images/feature_2.png" alt="tips02">
+                    <h4>專業米其林廚師</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, nulla tenetur rem sed,
+                        voluptatum assumenda doloremque.
+                    </p>
+                </li>
+                <li> <img src="images/feature_3.png" alt="tips02">
+                    <h4>對於專業不能退讓</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, nulla tenetur rem sed,
+                        voluptatum assumenda doloremque.
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="chef">
+        <div class="container">
+            <img src="images/main_chef_brown.png" alt="">
+            <div class="chefInfo">
+                <h3>今日主廚：帕金森、梅在帕 <span>Tody Chef: Plum in Shock</span> </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio voluptates mollitia nam est fugiat,
+                    amet atque, deserunt rem culpa dolore in non dolores, labore voluptatum dicta dolorem vel laudantium
+                    velit.
+                    Numquam, officia! Blanditiis maxime, nostrum optio, repellendus ullam esse pariatur fugiat, quam
+                    consequatur expedita vitae provident deserunt repellat illo eligendi dicta laborum distinctio!
+                    Nostrum, quaerat quis molestias similique earum error.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h3>聽聽別人的感想</h3>
+        <div class="feedback-container">
+            <ul class="feedback-wrap">
+                <li>
+                    <img src="images/avatar_1.png" alt="顧客回饋01">
+                    <div class="feedbackContent">
+                        <h4>高雄一口吃</h4>
+                        <p>
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span>-- 產品經理</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/avatar_2.png" alt="顧客回饋02">
+                    <div class="feedbackContent">
+                        <h4>廟口小霸王</h4>
+                        <p>
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span>-- 美食獵人</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/avatar_3.png" alt="顧客回饋03">
+                    <div class="feedbackContent">
+                        <h4>春天也來了</h4>
+                        <p>
+                            自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。
+                        </p>
+                        <span>-- 絕對味蕾</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="booking">
+        <h3>我們的位置不太夠坐
+            <Span>要不要先訂位呢？</Span>
+        </h3>
+        <div class="container">
+            <img src="images/Map1.png" alt="餐廳位置圖">
+
+            <form class="form-booking" action="index.html">
+                <label for="name">姓名</label>
+                <input id="name" type="text" placeholder="請輸入訂位姓名">
+                <label for="number">電話</label>
+                <input id="number" type="tel" placeholder="02-12345678">
+                <label for="email">信箱</label>
+                <input id="email" type="email" placeholder="test@gmail.com">
+                <label for="num">人數</label>
+                <input id="num" type="number">
+
+                <label for="food">是否需要素食</label>
+                <div class="radio">
+                    <input id="food" type="radio" value="yes" name="food">是
+                    <input class="foodVeggie" id="food" type="radio" value="no" name="food">否
+                </div>
+
+                <div class="booking-button">
+                    <button class="btnCancel" type="button">取消</button>
+                    <button class="btnSubmit" type="submit">送出</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="footerContent">
+                <div class="about">
+                    <h3>關於 珍愛家蔬食早午餐</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum illum veritatis, optio quia,
+                        quisquam repudiandae assumenda, accusantium vel soluta. </p>
+                </div>
+                <div class="connect">
+                    <h3>聯絡方式</h3>
+                    <ul>
+                        <li>221新北市汐止區龍安路28巷14號</li>
+    
+                    </ul>
+                    <ul>
+                        <li> <a href="tel:+886-908313913"> 0908313913 </a> </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footerLink">
+                <h3>社群</h3>
+                <ul class="socialIcon">
+                    <li class="google">
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-google-plus-square"></i>
+                        </a>
+                    </li>
+                    <li class="twitter">
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-twitter-square"></i>
+                        </a>
+                    </li>
+                    <li class="fb">
+                        <a href="https://www.facebook.com/profile.php?id=100063983083873" target="_blank">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
